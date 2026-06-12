@@ -1,3 +1,5 @@
+import { PowerSmashButton } from "@/components/ui/power-smash-button";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -8,7 +10,7 @@ export default function Home() {
         </header>
 
         <div className="max-w-3xl py-24">
-          <p className="mb-5 inline-flex bg-secondary px-3 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-secondary-foreground">
+          <p className="mb-5 inline-flex rounded-2xl bg-secondary px-5 py-3 text-sm font-semibold uppercase tracking-[0.24em] text-secondary-foreground">
             Interactive systems, motion, and web craft
           </p>
           <h1 className="text-5xl font-semibold leading-none tracking-tight text-balance sm:text-7xl lg:text-8xl">
@@ -18,17 +20,15 @@ export default function Home() {
             A new portfolio is taking shape here, starting with a physics-driven
             animation playground for water, metal, gravity, and sound.
           </p>
-          <a
-            className="mt-10 inline-flex bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-primary-foreground"
-            href="mailto:kunderharshith3@gmail.com"
-          >
-            Contact
-          </a>
+          <PowerSmashButton className="mt-10">Contact</PowerSmashButton>
         </div>
 
-        <footer className="flex flex-col gap-3 border-t border-foreground pt-5 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <footer className="pt-5 text-sm">
+          <div className="mb-5 h-px w-full rounded-full bg-foreground" />
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <span>Next.js foundation ready.</span>
           <span>Simulator build coming next.</span>
+          </div>
         </footer>
       </section>
     </main>
