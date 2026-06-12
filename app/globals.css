@@ -2,26 +2,53 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #ffffff;
   --primary: #e95144;
   --primary-foreground: #ffffff;
-  --secondary: #ffd814;
-  --secondary-foreground: #000000;
+  --secondary: #0027eb;
+  --secondary-foreground: #ffffff;
+  --btn-bg: #10bbbb;
+  --btn-border: #46e3e3;
+  --btn-text: #000000;
+  --btn-ring: #00bbbb;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-border: var(--btn-border);
+  --color-btn-text: var(--btn-text);
+  --color-btn-ring: var(--btn-ring);
+  --shadow-btn: 0 15px 25px -10px rgba(16, 187, 187, 0.8);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
 
+@keyframes rave {
+  0% {
+    background-color: hsla(0, 25%, 95%, 1);
+  }
+  25% {
+    background-color: hsla(90, 25%, 95%, 1);
+  }
+  50% {
+    background-color: hsla(180, 25%, 95%, 1);
+  }
+  75% {
+    background-color: hsla(270, 25%, 95%, 1);
+  }
+  100% {
+    background-color: hsla(360, 25%, 95%, 1);
+  }
+}
+
 body {
-  background: var(--background);
+  animation: rave 6s linear infinite;
   color: var(--foreground);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
@@ -30,4 +57,22 @@ body {
 ::selection {
   background: var(--secondary);
   color: var(--secondary-foreground);
+}
+
+main {
+  mix-blend-mode: difference;
+}
+
+/* Fallback utilities to guarantee CSS compiles and registers properties */
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-btn-bg {
+  background-color: var(--btn-bg);
+}
+.border-btn-border {
+  border-color: var(--btn-border);
+}
+.text-btn-text {
+  color: var(--btn-text);
 }

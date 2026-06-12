@@ -2,7 +2,7 @@ import { PowerSmashButton } from "@/components/ui/power-smash-button";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-transparent text-foreground">
       <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-between px-6 py-8 sm:px-10 lg:px-12">
         <header className="flex items-center justify-between text-sm uppercase tracking-[0.18em]">
           <span>Harshith Kunder</span>
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         <footer className="pt-5 text-sm">
-          <div className="mb-5 h-px w-full rounded-full bg-foreground" />
+          <div className="mb-5 h-px w-full rounded-full bg-current" />
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <span>Next.js foundation ready.</span>
           <span>Simulator build coming next.</span>

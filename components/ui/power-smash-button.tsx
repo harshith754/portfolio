@@ -4,7 +4,7 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const powerSmashButtonVariants = cva(
-  "group relative rounded-2xl bg-red-500 font-bold uppercase tracking-wider text-white border-b-[8px] border-red-700 shadow-[0_15px_25px_-10px_rgba(239,68,68,0.8)] transition-all duration-100 active:translate-y-[8px] active:border-b-[0px] focus:outline-none focus:ring-4 focus:ring-red-400/50",
+  "group relative rounded-2xl bg-btn-bg font-bold uppercase tracking-wider text-btn-text border-b-[8px] border-btn-border shadow-btn transition-all duration-100 active:translate-y-[8px] active:border-b-[0px] focus:outline-none focus:ring-4 focus:ring-btn-ring/50",
   {
     variants: {
       size: {
